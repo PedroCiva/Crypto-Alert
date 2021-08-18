@@ -1,3 +1,4 @@
+# Some packages are imported in full or twice due to problems with py-to-exe in getting the modules
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import smtplib
@@ -12,9 +13,9 @@ def Send_Email_Alert(subject, body, to):
     msg['subject'] = subject
     msg['to'] = to
 
-    user = "cryptoalert.alert@gmail.com"
+    user = input("Enter your alert e-mail address: ")
     msg['from'] = user
-    password = "zthljbqoddydbvxd"
+    password = input("Enter your alert password: ")
 
     server = smtplib.SMTP("smtp.gmail.com", 587)
     server.starttls()

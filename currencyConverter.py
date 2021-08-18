@@ -1,3 +1,4 @@
+# Some packages are imported in full or twice due to problems with py-to-exe in getting the modules
 import bs4
 from bs4 import BeautifulSoup
 import requests
